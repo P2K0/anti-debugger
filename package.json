@@ -1,0 +1,20 @@
+{
+  "name": "@p2k0/anti-debugger",
+  "version": "0.0.1",
+  "description": "一个防止调试的JavaScript的小工具",
+  "main": "./dist/index.es.ts",
+  "module": "./dist/index.es.js",
+  "typings": "./dist/index.d.ts",
+  "author": "p2k0",
+  "license": "ISC",
+  "files": [
+    "*",
+    "!src/**"
+  ],
+  "keywords": [
+    "debugging",
+    "security",
+    "protection",
+    "tools"
+  ]
+}
