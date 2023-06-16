@@ -39,13 +39,13 @@ pnpm add @p2k0/anti-debugger -S
 
 
 
-## 使用
+## 使用方法
 
-在你的项目中，导入 `@p2k0/anti-debugger` ，然后创建一个实例，传递一个配置对象作为参数。配置对象包含三个可选的属性，默认都为 `false`：
+在你的项目中导入 `@p2k0/anti-debugger`，然后创建一个实例，并将配置对象作为参数传递。配置对象包含三个可选属性，默认都为 `false`：
 
-- `disableKeyboard`：如果设置为 `true`，将禁用 `F12` 和 `Ctrl+Shift+I` 快捷键。
-- `disableDebugger`：如果设置为 `true`，将防止使用 `debugger;` 语句打开调试器。
-- `disableConsole`：如果设置为 `true`，将禁用控制台输出。
+- `keyboard`（可选）：如果设置为 `true`，则禁用 `F12` 和 `Ctrl+Shift+I` 快捷键。
+- `debugger`（可选）：如果设置为 `true`，则通过 `debugger;` 语句打开调试器。
+- `console`（可选）：如果设置为 `true`，则禁用控制台输出。
 
 
 
@@ -55,13 +55,11 @@ pnpm add @p2k0/anti-debugger -S
 import AntiDebugger from "@p2k0/anti-debugger";
 
 const antiDebugger = new AntiDebugger({
-  disableKeyboard: true,
-  disableDebugger: true,
-  disableConsole: true
+  keyboard: true,
+  debugger: true,
+  console: true
 });
 ```
-
-
 
 ```html
 <!DOCTYPE html>
@@ -77,11 +75,40 @@ const antiDebugger = new AntiDebugger({
       import AntiDebugger from "./anti-debugger/index.es.js";
 
       new AntiDebugger({
-        disableKeyboard: true,
-        disableDebugger: true,
-        disableConsole: true
+        keyboard: true,
+        debugger: true,
+        console: true
       });
     </script>
   </body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Using @p2k0/anti-debugger with AMD</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  <script>
+    require.config({
+      paths: {
+        "@p2k0/anti-debugger": "path/to/@p2k0/anti-debugger"
+      }
+    });
+  </script>
+  <script>
+    define(["@p2k0/anti-debugger"], function(AntiDebugger) {
+       new AntiDebugger({
+        keyboard: true,
+        debugger: true,
+        console: true
+      });
+    });
+  </script>
+
+</head>
+<body></body>
 </html>
 ```

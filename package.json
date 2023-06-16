@@ -1,20 +1,25 @@
 {
   "name": "@p2k0/anti-debugger",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "一个防止调试的JavaScript的小工具",
-  "main": "./dist/index.es.ts",
-  "module": "./dist/index.es.js",
-  "typings": "./dist/index.d.ts",
   "author": "p2k0",
   "license": "ISC",
-  "files": [
-    "*",
-    "!src/**"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/P2K0/anti-debugger.git"
+  },
   "keywords": [
     "debugging",
     "security",
     "protection",
     "tools"
+  ],
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.mjs",
+  "browser": "dist/index.amd.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "*",
+    "!src/**"
   ]
 }

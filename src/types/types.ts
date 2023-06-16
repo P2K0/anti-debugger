@@ -1,5 +1,5 @@
 export interface Config {
-  disableKeyboard?: boolean
-  disableDebugger?: boolean
-  disableConsole?: boolean
+  keyboard?: boolean
+  debugger?: boolean
+  console?: boolean
 }

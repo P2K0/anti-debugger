@@ -1,19 +1,14 @@
 import type { Config } from "../types/types";
 
 class AntiDebugger {
-  constructor(config: Config) {
-    this.startupAntiDebugger(config);
+  constructor(config?: Config) {
+    config && this.startup(config);
   }
 
-  private startupAntiDebugger(config: Config): void {
-    if (config.disableKeyboard)
-      this.disableKeyboard();
-
-    if (config.disableDebugger)
-      this.disableDebugger();
-
-    if (config.disableConsole)
-      this.disableConsole();
+  private startup(config: Config): void {
+    config.keyboard && this.disableKeyboard();
+    config.debugger && this.disableDebugger();
+    config.console && this.disableConsole();
   }
 
   private disableKeyboard(): void {
