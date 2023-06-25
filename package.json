@@ -1,6 +1,6 @@
 {
   "name": "@p2k0/anti-debugger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "一个防止调试的JavaScript的小工具",
   "author": "p2k0",
   "license": "ISC",

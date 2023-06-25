@@ -1,5 +1,11 @@
 # @p2k0/anti-debugger
 
+## 0.1.1
+
+### Patch Changes
+
+- chore: update version to fix dist/d.ts
+
 ## 0.1.0
 
 ### Minor Changes
